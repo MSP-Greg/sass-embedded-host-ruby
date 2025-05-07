@@ -24,6 +24,9 @@ jobs:
           - jruby-head
           - truffleruby-head
           - truffleruby+graalvm-head
+        include:
+          - os: windows-latest
+            ruby-version: ucrt
         exclude:
           - os: windows-latest
             ruby-version: truffleruby-head
