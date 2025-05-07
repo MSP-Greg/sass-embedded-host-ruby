@@ -148,6 +148,8 @@ jobs:
               run: |
                 pkg install build-essential node-22 protobuf ruby-33
                 pkg install "$(pkg search -HI -o pkg.name "$(ruby -e 'puts RbConfig::CONFIG["CC"]')")"
+          - os: windows-latest
+            ruby-version: ucrt
 
     steps:
       - name: Checkout
